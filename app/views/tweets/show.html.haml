@@ -1,0 +1,65 @@
+.main
+  .main__show
+    .main__show-image
+      = image_tag 'image.yu.jpeg', class: 'tweet-img'
+      .main__show-image--text
+        あああああああああああああああああああああああああ
+    .main__show-bottom
+      .main__show-bottom__left
+        = image_tag 'image.yu.jpeg', class: 'u-avatar'
+        %span
+          Tweet User
+        .main__show-bottom__left__name
+          あああああ
+      .main__show-bottom__right
+        = link_to '' do
+          .main__show-bottom__right-box
+            Delete
+        = link_to '' do
+          .main__show-bottom__right-box
+            Edit
+
+    .main__show-comments
+      .main__show-comments--head
+        %h2
+          * Comments
+        = link_to '' do
+          = fa_icon 'comment 3x'
+      .main__show-comments--content
+
+        .main__show-comments--content_list
+          = image_tag 'image.yu.jpeg', class: 'u-avatar'
+          .main__show-comments--content_list--text
+            .main__show-comments--content_list--text__user-name
+              いいい
+            .main__show-comments--content_list--text__body
+              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+        .main__show-comments--content_list
+          = image_tag 'image.yu.jpeg', class: 'u-avatar'
+          .main__show-comments--content_list--text
+            .main__show-comments--content_list--text__user-name
+              いいい
+            .main__show-comments--content_list--text__body
+              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+        .main__show-comments--content_list
+          = image_tag 'image.yu.jpeg', class: 'u-avatar'
+          .main__show-comments--content_list--text
+            .main__show-comments--content_list--text__user-name
+              いいい
+            .main__show-comments--content_list--text__body
+              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+
+
+
+
+
+
+
+
+
+
+        .main__show-comments--content_no
+          Sorry, No Comment...

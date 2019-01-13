@@ -25,15 +25,10 @@
       height: 80px;
       position: relative;
       .u-avatar {
-        height: 80px;
-        width: 80px;
-        border-radius: 50%;
-        border: solid 2px palegoldenrod;
+        @include avatar(80px);
         position: absolute;
         top: 0;
         left: 0;
-        object-fit: cover;
-        box-shadow: 0 0 0 2px pink;
       }
       &_name {
         font-weight: bold;

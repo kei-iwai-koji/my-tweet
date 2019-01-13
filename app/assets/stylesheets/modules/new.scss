@@ -25,16 +25,14 @@
         }
       }
       &-btn {
+        @include btn;
+        padding: 8px 10px;
         font-size: 20px;
         color: #19448e;
         letter-spacing: 3px;
         font-weight: bold;
-        border: solid 2px #19448e;
-        border-radius: 5px;
-        padding: 8px 10px;
         margin: 20px 0;
         float: right;
-        font-family: 'Kaushan Script', cursive;
       }
     }
   }
