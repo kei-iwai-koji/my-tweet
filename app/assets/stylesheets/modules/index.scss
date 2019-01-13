@@ -1,0 +1,73 @@
+.main {
+  margin: 100px 0 50px;
+  padding: 10px 60px;
+  &__tweet {
+    width: 800px;
+    height: 500px;
+    background-color: lavenderblush;
+    margin: 50px auto;
+    border: dotted 2px;
+    position: relative;
+    overflow: hidden;
+    &-image {
+      position: absolute;
+      top: 0;
+      .tweet-img {
+        width: 800px;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+    &-user {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 80px;
+      position: relative;
+      .u-avatar {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: solid 2px palegoldenrod;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        box-shadow: 0 0 0 2px pink;
+      }
+      &_name {
+        font-weight: bold;
+        font-size: 18px;
+        text-shadow: 1px 1px 1px white;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 3px;
+        left: 25px;
+      }
+    }
+    .icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      opacity: 0.5;
+    }
+    &-text {
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      letter-spacing: 3px;
+      font-size: 20px;
+      text-shadow: 1px 1px 1px white;
+    }
+  }
+}
+
+.fa-feather {
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  // font-size: 90px;
+  color: lightskyblue;
+  font-weight: regular;
+}
