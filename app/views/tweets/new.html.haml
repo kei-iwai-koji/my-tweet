@@ -1,10 +1,12 @@
 .main
   .main__new-form
-    .main__new-form__top
-      %textarea{:cols => "40", :rows => "5"}
-    .main__new-form__bottom
-      .main__new-form__bottom-image
-        = fa_icon 'camera-retro 5x'
-      = link_to '' do
-        .main__new-form__bottom-btn
-          Send Tweet
+    = form_for @tweet do |f|
+      .main__new-form__top
+        = f.text_area :text, class: 'text-form'
+      .main__new-form__bottom
+        .main__new-form__bottom-image
+          = f.file_field :image, class: 'hidden'
+          = fa_icon 'camera-retro 5x'
+        = f.submit 'Send Tweet', class: 'main__new-form__bottom-btn'
+
+
