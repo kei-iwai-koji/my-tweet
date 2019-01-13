@@ -21,7 +21,7 @@
 |email|text|null: false, unique: true|
 
 ### Association
-- has_many :users
+- has_many :tweets
 - has_many :comments
 
 
