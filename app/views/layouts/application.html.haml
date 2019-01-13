@@ -15,10 +15,12 @@
         .header-title
           My Tweet
       .header-btn
-        .header-btn__box
-          Log In
-        .header-btn__box
-          Sign Up
+        = link_to new_user_session_path do
+          .header-btn__box
+            Log In
+        = link_to new_user_registration_path do
+          .header-btn__box
+            Sign Up
 
     = yield
 

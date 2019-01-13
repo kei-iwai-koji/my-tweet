@@ -6,10 +6,12 @@
       = image_tag 'image.yu.jpeg', class: 'u-avatar'
       .main__tweet-user_name
         ああああああ
-    = fa_icon 'angle-double-down', class: 'icon'
+    = link_to '' do
+      = fa_icon 'angle-double-down', class: 'icon'
     .main__tweet-text
       ああああああああああああああああああああああああああいいいいいいいいいいいいいいいいいいいいいいいいいいいいいうううううううううううううううううううううううううううううううううえええええええええええええええええええええええええおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
   .main__tweet
   .main__tweet
 
-  = fa_icon 'feather 8x'
+  = link_to new_tweet_path do
+    = fa_icon 'feather 8x'
