@@ -1,0 +1,28 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin avatar($size) {
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  border: solid 2px #fff799;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px #e3adc1;
+}
+
+@mixin pic {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+}
+
+@mixin btn {
+  font-family: 'Kaushan Script', cursive;
+  border-radius: 10px;
+  border: solid 2px;
+}

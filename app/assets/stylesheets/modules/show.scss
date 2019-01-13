@@ -1,0 +1,115 @@
+.main {
+  &__show {
+    width: 800px;
+    margin: 0 auto;
+    &-image {
+      box-sizing: border-box;
+      width: 800px;
+      height: 500px;
+      background-color: lavenderblush;
+      margin: 50px auto 10px;
+      border: dotted 2px;
+      overflow: hidden;
+      position: relative;
+      .tweet-img {
+        @include pic;
+      }
+      &--text {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px white;
+      }
+    }
+    &-bottom {
+      padding: 5px;
+      @include clearfix;
+      &__left {
+        height: 80px;
+        width: 50%;
+        float: left;
+        position: relative;
+        .u-avatar {
+          @include avatar(80px);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        span {
+          position: absolute;
+          bottom: 30px;
+          left: 100px;
+          font-family: 'Kaushan Script', cursive;
+          color: #bbdbf3;
+          letter-spacing: 2px;
+        }
+        &__name {
+          font-size: 20px;
+          font-weight: bold;
+          position: absolute;
+          bottom: 0;
+          left: 100px;
+        }
+      }
+      &__right {
+        float: right;
+        line-height: 80px;
+        vertical-align: middle;
+        &-box {
+          line-height: 40px;
+          padding: 8px;
+          letter-spacing: 2px;
+          display: inline;
+          margin-left: 30px;
+          @include btn;
+        }
+      }
+    }
+    &-comments {
+      margin-top: 50px;
+      &--head {
+        @include clearfix;
+        border-bottom: dotted 2px;
+        h2 {
+          font-family: 'Kaushan Script', cursive;
+          font-weight: bold;
+          font-size: 35px;
+          letter-spacing: 3px;
+          float: left;
+        }
+        .fa-comment {
+          float: right;
+        }
+      }
+      &--content {
+        &_list {
+          padding: 20px;
+          .u-avatar {
+            @include avatar(50px);
+            float: left;
+          }
+          &--text {
+            margin-left: 70px;
+            &__user-name {
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+            &__body {
+              font-size: 18px;
+            }
+          }
+        }
+        &_no {
+          line-height: 200px;
+          vertical-align: middle;
+          text-align: center;
+          color: #bbdbf3;
+          font-family: 'Kaushan Script', cursive;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
