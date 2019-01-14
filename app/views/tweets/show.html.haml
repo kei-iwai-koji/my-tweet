@@ -24,13 +24,21 @@
       .main__show-comments--head
         %h2
           * Comments
-        = link_to '' do
-          = fa_icon 'comment 3x'
+        = fa_icon 'comment 3x'
       .main__show-comments--content
         = render 'comments/comment'
 
-
-
-
         .main__show-comments--content_no
           Comment, Please.
+
+
+.comments-container
+  .comments-container__modal
+    = form_for '/tweets/#{@tweet.id}/comments', method: :post do |f|
+      = f.text_area :text, class: 'modal-form'
+      =f.submit 'post', class: 'modal-submit'
+      .cancel-btn キャンセル
+
+
+
+
