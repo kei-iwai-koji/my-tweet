@@ -13,7 +13,7 @@
           = @tweet.user.nickname
       - if @tweet.user == current_user
         .main__show-bottom__right
-          = link_to '', class: 'btn-link' do
+          = link_to tweet_path, method: :delete, class: 'btn-link' do
             .main__show-bottom__right-box
               Delete
           = link_to '', class: 'btn-link' do
