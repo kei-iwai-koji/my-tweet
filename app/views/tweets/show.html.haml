@@ -26,10 +26,11 @@
           * Comments
         = fa_icon 'comment 3x'
       .main__show-comments--content
-        = render 'comments/comment'
-
-        .main__show-comments--content_no
-          Comment, Please.
+        - if @comments.present?
+          = render @comments
+        - else
+          .main__show-comments--content_no
+            Comment, Please.
 
 .comments-container
   .comments-container__modal
