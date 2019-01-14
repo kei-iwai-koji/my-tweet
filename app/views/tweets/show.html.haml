@@ -24,43 +24,21 @@
       .main__show-comments--head
         %h2
           * Comments
-        = link_to '' do
-          = fa_icon 'comment 3x'
+        = fa_icon 'comment 3x'
       .main__show-comments--content
+        - if @comments.present?
+          = render @comments
+        - else
+          .main__show-comments--content_no
+            Comment, Please.
 
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+.comments-container
+  .comments-container__modal
+    = form_for [@tweet, @comment], method: :post do |f|
+      = f.text_area :text, class: 'modal-form'
+      =f.submit 'post', class: 'modal-submit'
+      .cancel-btn キャンセル
 
 
 
 
-
-
-
-
-
-
-
-        .main__show-comments--content_no
-          Comment, Please.
