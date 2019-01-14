@@ -27,37 +27,7 @@
         = link_to '' do
           = fa_icon 'comment 3x'
       .main__show-comments--content
-
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-        .main__show-comments--content_list
-          = image_tag 'image.yu.jpeg', class: 'u-avatar'
-          .main__show-comments--content_list--text
-            .main__show-comments--content_list--text__user-name
-              いいい
-            .main__show-comments--content_list--text__body
-              ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-
-
-
-
-
-
+        = render 'comments/comment'
 
 
 
