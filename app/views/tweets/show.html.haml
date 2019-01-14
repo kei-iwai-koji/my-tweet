@@ -1,23 +1,24 @@
 .main
   .main__show
     .main__show-image
-      = image_tag 'image.yu.jpeg', class: 'tweet-img'
+      = image_tag (@tweet.image.url), class: 'tweet-img'
       .main__show-image--text
-        あああああああああああああああああああああああああ
+        = @tweet.text
     .main__show-bottom
       .main__show-bottom__left
         = image_tag 'image.yu.jpeg', class: 'u-avatar'
         %span
           Tweet User
         .main__show-bottom__left__name
-          あああああ
-      .main__show-bottom__right
-        = link_to '' do
-          .main__show-bottom__right-box
-            Delete
-        = link_to '' do
-          .main__show-bottom__right-box
-            Edit
+          = @tweet.user.nickname
+      - if @tweet.user == current_user
+        .main__show-bottom__right
+          = link_to '', class: 'btn-link' do
+            .main__show-bottom__right-box
+              Delete
+          = link_to '', class: 'btn-link' do
+            .main__show-bottom__right-box
+              Edit
 
     .main__show-comments
       .main__show-comments--head
@@ -62,4 +63,4 @@
 
 
         .main__show-comments--content_no
-          Sorry, No Comment...
+          Comment, Please.
