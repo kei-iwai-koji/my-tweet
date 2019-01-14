@@ -31,10 +31,9 @@
         .main__show-comments--content_no
           Comment, Please.
 
-
 .comments-container
   .comments-container__modal
-    = form_for '/tweets/#{@tweet.id}/comments', method: :post do |f|
+    = form_for [@tweet, @comment], method: :post do |f|
       = f.text_area :text, class: 'modal-form'
       =f.submit 'post', class: 'modal-submit'
       .cancel-btn キャンセル
