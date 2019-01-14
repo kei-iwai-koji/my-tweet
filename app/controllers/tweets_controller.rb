@@ -17,9 +17,19 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params) if tweet.user == current_user
+    redirect_to tweet_path(params[:id])
+  end
+
   def destroy
     tweet = Tweet.find(params[:id])
-    tweet.destroy
+    tweet.destroy if tweet.user == current_user
     redirect_to root_path
   end
 
