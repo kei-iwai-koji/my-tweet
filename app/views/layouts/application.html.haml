@@ -15,15 +15,17 @@
         .header-title
           My Tweet
       .header-btn
-        = link_to new_user_session_path, class: 'btn-link' do
-          .header-btn__box
-            Log In
-        = link_to new_user_registration_path, class: 'btn-link' do
-          .header-btn__box
-            Sign Up
-        = link_to destroy_user_session_path, method: :delete, class: 'btn-link' do
-          .header-btn__box
-            Log Out
+        - if user_signed_in?
+          = link_to destroy_user_session_path, method: :delete, class: 'btn-link' do
+            .header-btn__box
+              Log Out
+        -else
+          = link_to new_user_session_path, class: 'btn-link' do
+            .header-btn__box
+              Log In
+          = link_to new_user_registration_path, class: 'btn-link' do
+            .header-btn__box
+              Sign Up
 
     = yield
 
