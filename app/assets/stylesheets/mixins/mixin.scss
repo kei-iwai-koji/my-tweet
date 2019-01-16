@@ -22,7 +22,11 @@
 }
 
 @mixin btn {
+  color: darkslateblue;
   font-family: 'Kaushan Script', cursive;
   border-radius: 10px;
   border: solid 2px;
+  &:hover {
+    color: #bbdbf3;
+  }
 }

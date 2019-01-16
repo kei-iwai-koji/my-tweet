@@ -16,6 +16,7 @@
           My Tweet
       .header-btn
         - if user_signed_in?
+          = image_tag 'image.yu.jpeg', class: 'u-avatar'
           = link_to destroy_user_session_path, method: :delete, class: 'btn-link' do
             .header-btn__box
               Log Out

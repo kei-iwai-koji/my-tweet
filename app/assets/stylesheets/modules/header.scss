@@ -10,6 +10,7 @@
   z-index: 1;
   @include clearfix();
   &-title {
+    color: darkslateblue;
     font-family: 'Kaushan Script', cursive;
     font-weight: bold;
     line-height: 100px;
@@ -17,11 +18,21 @@
     font-size: 30px;
     letter-spacing: 5px;
     float: left;
+    &:hover {
+      color: #68699b;
+    }
   }
   &-btn {
     float: right;
     line-height: 100px;
     vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .u-avatar {
+      @include avatar(60px);
+      margin: 0 10px;
+    }
     &__box {
       @include btn;
       padding: 10px;
