@@ -24,7 +24,8 @@
       .main__show-comments--head
         %h2
           * Comments
-        = fa_icon 'comment 3x'
+        - if user_signed_in?
+          = fa_icon 'comment 3x'
       .main__show-comments--content
         - if @comments.present?
           = render @comments

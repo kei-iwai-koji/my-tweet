@@ -1,17 +1,20 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.main
+  .main__devise
+    .main__devise--header
+      Entrance
+    .main__devise--form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .main__devise--form__mask
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'main__devise--form__mask-field'
+        .main__devise--form__mask
+          = f.label :password
+          %br/
+          = f.password_field :password, autocomplete: "current-password", class: 'main__devise--form__mask-field'
+
+        = f.submit "Log In", class: 'main__devise--form__submit'
+
+    .main__devise--footer
+      = link_to new_user_registration_path ,class: 'main__devise--footer-link' do
+        Do you become a New Member?

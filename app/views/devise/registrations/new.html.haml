@@ -1,26 +1,33 @@
-.devise
-  %h2 Sign up
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = devise_error_messages!
-    .field
-      = f.label :nickname
-      %br/
-      = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-    .field
-      = f.label :email
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
-    .field
-      = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "new-password"
-    .field
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password"
-    .actions
-      = f.submit "Sign up"
-  = render "devise/shared/links"
+.main
+  .main__devise
+    .main__devise--header
+      Welcome, New User!
+    .main__devise--form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .main__devise--form__mask
+          = f.label :nickname
+          %br/
+          = f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: 'main__devise--form__mask-field'
+        .main__devise--form__mask
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'main__devise--form__mask-field'
+        .main__devise--form__mask
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password", class: 'main__devise--form__mask-field'
+        .main__devise--form__mask
+          = f.label :password_again
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: 'main__devise--form__mask-field'
+
+        = f.submit "Sign up", class: 'main__devise--form__submit'
+
+    .main__devise--footer
+      = link_to new_user_session_path ,class: 'main__devise--footer-link' do
+        Are you Member?
+
