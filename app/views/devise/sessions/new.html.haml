@@ -1,19 +1,19 @@
 .main
-  .main__login
-    .main__login--header
+  .main__devise
+    .main__devise--header
       Entrance
-    .main__login--form
+    .main__devise--form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        .main__login--form__mask
+        .main__devise--form__mask
           = f.label :email
           %br/
-          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'main__login--form__mask-field'
-        .main__login--form__mask
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'main__devise--form__mask-field'
+        .main__devise--form__mask
           = f.label :password
           %br/
-          = f.password_field :password, autocomplete: "current-password", class: 'main__login--form__mask-field'
+          = f.password_field :password, autocomplete: "current-password", class: 'main__devise--form__mask-field'
 
-        = f.submit "Log In", class: 'main__login--form__submit'
+        = f.submit "Log In", class: 'main__devise--form__submit'
 
 
 
