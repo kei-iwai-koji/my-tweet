@@ -81,6 +81,9 @@
         }
         .fa-comment {
           float: right;
+          &:hover {
+            color: lightskyblue;
+          }
         }
       }
       &--content {
