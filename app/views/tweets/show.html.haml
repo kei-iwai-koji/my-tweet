@@ -35,11 +35,7 @@
 
 .comments-container
   .comments-container__modal
+    = fa_icon 'times-circle', class: 'cancel-icon'
     = form_for [@tweet, @comment], method: :post do |f|
       = f.text_area :text, class: 'modal-form'
       =f.submit 'post', class: 'modal-submit'
-      .cancel-btn キャンセル
-
-
-
-
