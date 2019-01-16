@@ -10,7 +10,8 @@
   z-index: 1;
   @include clearfix();
   &-title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
     line-height: 100px;
     vertical-align: middle;
     font-size: 30px;

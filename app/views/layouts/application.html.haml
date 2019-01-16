@@ -21,6 +21,9 @@
         = link_to new_user_registration_path, class: 'btn-link' do
           .header-btn__box
             Sign Up
+        = link_to destroy_user_session_path, method: :delete, class: 'btn-link' do
+          .header-btn__box
+            Log Out
 
     = yield
 
