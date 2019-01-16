@@ -6,7 +6,10 @@
         = @tweet.text
     .main__show-bottom
       .main__show-bottom__left
-        = image_tag 'image.yu.jpeg', class: 'u-avatar'
+        - if @tweet.user.avatar.present?
+          = image_tag (@tweet.user.avatar.url), class: 'u-avatar'
+        - else
+          = image_tag 'avatar.png', class: 'u-avatar'
         %span
           Tweet User
         .main__show-bottom__left__name
