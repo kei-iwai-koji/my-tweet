@@ -1,0 +1,10 @@
+.main
+  .main__new-form
+    = form_for @tweet do |f|
+      .main__new-form__top
+        = f.text_area :text, class: 'text-form'
+      .main__new-form__bottom
+        .main__new-form__bottom-image
+          = f.file_field :image, class: 'hidden'
+          = fa_icon 'camera-retro 5x'
+        = f.submit 'Edit Tweet', class: 'main__new-form__bottom-btn'
