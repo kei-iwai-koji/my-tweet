@@ -4,7 +4,7 @@
       .main__new-form__top
         = f.text_area :text, class: 'text-form'
       .main__new-form__bottom
-        .main__new-form__bottom-image
+        = f.label :image, class: 'main__new-form__bottom-image' do
           = f.file_field :image, class: 'hidden'
           = fa_icon 'camera-retro 5x'
         = f.submit 'Send Tweet', class: 'main__new-form__bottom-btn'
