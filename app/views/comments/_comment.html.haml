@@ -1,0 +1,10 @@
+.main__show-comments--content_list
+  - if comment.user.avatar.present?
+    = image_tag (comment.user.avatar.url), class: 'u-avatar'
+  - else
+    = image_tag 'avatar.png', class: 'u-avatar'
+  .main__show-comments--content_list--text
+    .main__show-comments--content_list--text__user-name
+      = comment.user.nickname
+    .main__show-comments--content_list--text__body
+      = comment.text
