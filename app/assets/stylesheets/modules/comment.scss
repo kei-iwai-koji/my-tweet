@@ -1,0 +1,17 @@
+.main__show-comments--content_list {
+  padding: 20px;
+  .u-avatar {
+    @include avatar(50px);
+    float: left;
+  }
+  &--text {
+    margin-left: 70px;
+    &__user-name {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    &__body {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.main__tweet
+  .main__tweet-image
+    = image_tag (tweet.image.url), class: 'tweet-img'
+  .main__tweet-user
+    - if tweet.user.avatar.present?
+      = image_tag (tweet.user.avatar.url), class: 'u-avatar'
+    - else
+      = image_tag 'avatar.png', class: 'u-avatar'
+    .main__tweet-user_name
+      = tweet.user.nickname
+  .main__tweet-menu
+    = fa_icon 'angle-double-down', class: 'icon'
+    .main__tweet-menu__list
+      = link_to tweet_path(tweet.id), class: 'btn-link'do
+        .main__tweet-menu__list-box
+          More Detail
+      - if current_user == tweet.user
+        = link_to edit_tweet_path(tweet.id), class: 'btn-link'do
+          .main__tweet-menu__list-box
+            Edit
+        = link_to tweet_path(tweet.id), method: :delete, class: 'btn-link' do
+          .main__tweet-menu__list-box
+            Delete
+  .main__tweet-text
+    = tweet.text

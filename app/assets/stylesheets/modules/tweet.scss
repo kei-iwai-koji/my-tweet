@@ -1,0 +1,82 @@
+.main__tweet {
+  width: 800px;
+  height: 500px;
+  background-color: lavenderblush;
+  margin: 50px auto;
+  border: dotted 2px;
+  position: relative;
+  overflow: hidden;
+  &-image {
+    position: absolute;
+    top: 0;
+    .tweet-img {
+      @include pic;
+    }
+  }
+  &-user {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 80px;
+    position: relative;
+    .u-avatar {
+      @include avatar(80px);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &_name {
+      font-weight: bold;
+      font-size: 18px;
+      text-shadow: 1px 1px 1px white;
+      letter-spacing: 2px;
+      position: absolute;
+      bottom: 3px;
+      left: 25px;
+    }
+  }
+  &-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Kaushan Script', cursive;
+    .icon {
+      float: right;
+      font-size: 30px;
+      padding: 0 0 10px 20px;
+      opacity: 0.5;
+      &:hover {
+        color: lightskyblue;
+        font-size: 33px;
+      }
+    }
+    &__list {
+      width: 120px;
+      border-radius: 5px;
+      background-color: white;
+      margin-top: 40px;
+      opacity: 0.6;
+      &-box {
+        color: darkslateblue;
+        font-size: 16px;
+        line-height: 25px;
+        vertical-align: middle;
+        letter-spacing: 1px;
+        padding: 5px;
+        &:hover {
+          font-weight: bold;
+          color: lightskyblue;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  &-text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px white;
+  }
+}
