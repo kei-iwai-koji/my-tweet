@@ -26,7 +26,7 @@
           = f.password_field :password_confirmation, autocomplete: "new-password", class: 'main__devise--form__mask-field'
         .main__devise--form__mask
           %p Choice your Avatar!
-          .main__devise--form__mask-pic
+          = f.label :avatar, class: 'main__devise--form__mask-pic' do
             = f.file_field :avatar, class: 'hidden'
             = fa_icon 'grin-beam'
         = f.submit "Sign up", class: 'main__devise--form__submit'
