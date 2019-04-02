@@ -16,4 +16,18 @@
 
 .pagenate {
   text-align: center;
+  font-size: 24px;
+  font-family: 'Kaushan Script', cursive;
+  letter-spacing: 2px;
+  .current {
+    color: lightskyblue;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      font-weight: bold;
+      color: darkslateblue;
+      opacity: 0.2;
+    }
+  }
 }
