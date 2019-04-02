@@ -1,5 +1,7 @@
 .main
   = render @tweets
+  .pagenate
+    = paginate(@tweets)
 
   = link_to new_tweet_path do
     = fa_icon 'feather 8x'
